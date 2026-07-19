@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <title>IEDC CET — Innovation & Entrepreneurship Development Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Google+Sans:wght@300;400;500;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://tally.so/widgets/embed.js"></script>
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="mask-track-canvas"></canvas>
+
+  <nav id="navbar">
+    <a class="nav-logo" href="#">
+      <img src="assets/logo.png" alt="IEDC Logo" class="logo-image" loading="lazy" decoding="async">
+      <div class="logo-name">IEDC <span>CET</span></div>
+    </a>
+    <div class="nav-links-wrapper">
+      <ul class="nav-links">
+        <li><a href="#home" id="nav-home"><i data-lucide="home"></i>Home</a></li>
+        <li><a href="#events" id="nav-events"><i data-lucide="calendar"></i>Events</a></li>
+        <li><a href="#about" id="nav-about"><i data-lucide="info"></i>About Us</a></li>
+        <li><a href="#team" id="nav-team"><i data-lucide="users"></i>Team</a></li>
+        <li><a href="#socials" id="nav-socials"><i data-lucide="share-2"></i>Socials</a></li>
+      </ul>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home"><i data-lucide="home"></i>Home</a>
+    <a href="#events"><i data-lucide="calendar"></i>Events</a>
+    <a href="#about"><i data-lucide="info"></i>About Us</a>
+    <a href="#team"><i data-lucide="users"></i>Team</a>
+    <a href="#socials" style="border-bottom:none;"><i data-lucide="share-2"></i>Socials</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1 class="hero-title" aria-label="Innovation and Entrepreneurship Development Centre">
+        <span class="line"><span class="accent">INNOVATION</span> AND</span>
+        <span class="line"><span class="accent">ENTREPRENEURSHIP</span></span>
+        <span class="line">DEVELOPMENT CENTRE</span>
+      </h1>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        College of Engineering Trivandrum
+      </div>
+      <p class="hero-tagline">
+        <span id="typed-tagline"></span><span class="typed-cursor" id="tagline-cursor" style="display:none"></span>
+      </p>
+      <div class="hero-actions">
+        <a href="#events" class="btn-glass btn-primary-glow" id="btn-see-events">See our Events</a>
+        <a href="#tally-open=KYgJg7&tally-layout=modal&tally-width=600&tally-emoji-text=🚀&tally-emoji-animation=tada&tally-auto-close=0
+" class="btn-glass" id="btn-learn">Got an Idea ? 🚀</a>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-line"></span>
+        Scroll to explore
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="montage-stage">
+        <div class="montage-orbit"></div>
+        <div class="montage-orbit montage-orbit--inner"></div>
+
+        <figure class="montage-card montage-card--wide" data-angle="212" data-radius="0.92" data-tilt="-11" data-z="8">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/1.jpg" alt="Students working" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+
+        <figure class="montage-card" data-angle="286" data-radius="0.94" data-tilt="-7" data-z="10">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/3.jpg" alt="Hardware project" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+
+        <figure class="montage-card montage-card--video" data-angle="328" data-radius="0.78" data-tilt="8" data-z="9">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/4.jpg" alt="Workshop" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+
+        <figure class="montage-card montage-card--wide" data-angle="18" data-radius="0.97" data-tilt="-14" data-z="7">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/5.jpg" alt="startup" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+
+        <figure class="montage-card montage-card--video" data-angle="58" data-radius="0.84" data-tilt="10" data-z="12">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/6.jpg" alt="Workshop" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+
+        <figure class="montage-card" data-angle="102" data-radius="0.88" data-tilt="-4" data-z="5">
+          <div class="montage-frame">
+            <div class="montage-media">
+              <img src="assets/gallery/7.jpg" alt="Workshop" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <div class="montage-mobile-slider" aria-label="Montage slider">
+        <div class="montage-mobile-track">
+          <figure class="montage-card montage-slide">
+            <div class="montage-frame">
+              <div class="montage-media">
+                <img src="assets/gallery/1.jpg" alt="Students working" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </figure>
+
+          <figure class="montage-card montage-slide">
+            <div class="montage-frame">
+              <div class="montage-media">
+                <img src="assets/gallery/3.jpg" alt="Hardware project" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </figure>
+
+          <figure class="montage-card montage-slide">
+            <div class="montage-frame">
+              <div class="montage-media">
+                <img src="assets/gallery/4.jpg" alt="Workshop" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </figure>
+
+          <figure class="montage-card montage-slide">
+            <div class="montage-frame">
+              <div class="montage-media">
+                <img src="assets/gallery/5.jpg" alt="startup" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="montage-slider-hint">Swipe to browse</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LATEST & UPCOMING EVENTS SECTION ═══ -->
+  <section class="events-section" id="events">
+    <div class="section-header events-header">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Bulletin Board</span>
+    </div>
+
+    <div class="events-intro-container">
+      <p class="events-intro">
+        Keep track of the latest workshops, startup ideathons, and community meetups happening at IEDC CET. Grab your
+        pins and mark your calendars!
+      </p>
+
+      <!-- Bulletin board filter tabs -->
+      <div class="board-filters">
+        <button class="filter-tab active" data-filter="all">All Events</button>
+        <button class="filter-tab" data-filter="upcoming">
+          <span class="filter-dot upcoming"></span>Upcoming
+        </button>
+        <button class="filter-tab" data-filter="recent">
+          <span class="filter-dot recent"></span>Recent
+        </button>
+      </div>
+    </div>
+
+    <!-- Bulletin Board Container -->
+    <div class="bulletin-board">
+      <!-- Glass board corner standoffs -->
+      <div class="board-standoff top-left"></div>
+      <div class="board-standoff top-right"></div>
+      <div class="board-standoff bottom-left"></div>
+      <div class="board-standoff bottom-right"></div>
+
+      <!-- Neon grid accent glow behind the board -->
+      <div class="board-aura-left"></div>
+      <div class="board-aura-right"></div>
+
+      <div class="bulletin-empty-state" hidden aria-live="polite">
+        <div class="bulletin-empty-illustration" aria-hidden="true">
+          <svg viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="bulletinEmptyBoardGlow" x1="48" y1="28" x2="310" y2="206"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9E54FF" stop-opacity="0.22" />
+                <stop offset="0.48" stop-color="#4DABF7" stop-opacity="0.16" />
+                <stop offset="1" stop-color="#FF6B6B" stop-opacity="0.18" />
+              </linearGradient>
+              <linearGradient id="bulletinEmptySheet" x1="102" y1="72" x2="246" y2="182" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFFFFF" stop-opacity="0.22" />
+                <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06" />
+              </linearGradient>
+              <radialGradient id="bulletinEmptyPin" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(180 58) rotate(90) scale(16)">
+                <stop stop-color="#FFFFFF" />
+                <stop offset="0.52" stop-color="#FFB4B4" />
+                <stop offset="1" stop-color="#9E54FF" />
+              </radialGradient>
+            </defs>
+            <rect x="40" y="32" width="280" height="176" rx="30" fill="url(#bulletinEmptyBoardGlow)"
+              stroke="rgba(255,255,255,0.15)" />
+            <rect x="60" y="52" width="240" height="136" rx="24" fill="rgba(12, 14, 28, 0.55)"
+              stroke="rgba(255,255,255,0.09)" />
+            <rect x="118" y="78" width="124" height="94" rx="18" fill="url(#bulletinEmptySheet)"
+              stroke="rgba(255,255,255,0.12)" />
+            <path d="M144 108H216" stroke="rgba(255,255,255,0.6)" stroke-width="6" stroke-linecap="round" />
+            <path d="M144 128H204" stroke="rgba(255,255,255,0.42)" stroke-width="6" stroke-linecap="round" />
+            <path d="M144 148H190" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" />
+
+          </svg>
+        </div>
+        <h3 class="bulletin-empty-title">No Event here</h3>
+        <p class="bulletin-empty-text">New workshops, ideathons, and community meetups will appear here when they are
+          scheduled.</p>
+      </div>
+
+      <!-- Pinned cards container -->
+      <div class="bulletin-grid">
+        <!--Card containers-->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VISION / MISSION / OBJECTIVES CARDS ═══ -->
+  <div class="grid-section" id="about">
+    <div class="cards-container">
+
+      <div class="c-card" data-theme="purple">
+        <div class="c-card-header">
+          <div class="c-card-meta">
+            <span class="c-label purple">01</span>
+            <h2 class="c-title">Our Vision</h2>
+          </div>
+          <div class="c-icon purple">
+            <i data-lucide="telescope"></i>
+          </div>
+        </div>
+        <hr class="c-divider" />
+        <div class="c-body">
+          <p class="c-paragraph">
+            To establish IEDC CET as a centre of excellence in technology-driven entrepreneurship, fostering a
+            sustainable ecosystem that empowers students to become innovators, founders, and industry leaders —
+            integrating cutting-edge technologies, industry collaborations, and startup support.
+          </p>
+        </div>
+      </div>
+
+      <div class="c-card" data-theme="peach">
+        <div class="c-card-header">
+          <div class="c-card-meta">
+            <span class="c-label peach">02</span>
+            <h2 class="c-title">Our Mission</h2>
+          </div>
+          <div class="c-icon peach">
+            <i data-lucide="target"></i>
+          </div>
+        </div>
+        <hr class="c-divider" />
+        <div class="c-body">
+          <div class="c-pill-list">
+            <div class="c-pill">
+              <div class="c-pill-dot peach"></div>
+              <div class="c-pill-text">Promote an innovation-driven entrepreneurial culture among students through
+                structured mentorship and hands-on experience.</div>
+            </div>
+            <div class="c-pill">
+              <div class="c-pill-dot peach"></div>
+              <div class="c-pill-text">Foster enterprise among budding technopreneurs and create jobs by nurturing
+                high-potential student startups.</div>
+            </div>
+            <div class="c-pill">
+              <div class="c-pill-dot peach"></div>
+              <div class="c-pill-text">Bridge the gap between industry and academia through strategic collaborations and
+                knowledge-sharing platforms.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-card" data-theme="teal">
+        <div class="c-card-header">
+          <div class="c-card-meta">
+            <span class="c-label teal">03</span>
+            <h2 class="c-title">Our Objectives</h2>
+          </div>
+          <div class="c-icon teal">
+            <i data-lucide="rocket"></i>
+          </div>
+        </div>
+        <hr class="c-divider" />
+        <div class="c-body">
+          <div class="c-pill-list">
+            <div class="c-pill">
+              <div class="c-pill-dot teal"></div>
+              <div class="c-pill-text">Facilitate experiential learning through workshops and mentorship aligned with
+                industry processes.</div>
+            </div>
+            <div class="c-pill">
+              <div class="c-pill-dot teal"></div>
+              <div class="c-pill-text">Establish strong partnerships with industry leaders, research units, and global
+                startup enablers.</div>
+            </div>
+            <div class="c-pill">
+              <div class="c-pill-dot teal"></div>
+              <div class="c-pill-text">Support development of market-ready products with robust prototyping and
+                acceleration setups.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ GLASSMORPHISM QUOTE SECTION ═══ -->
+  <section class="quote-section">
+    <div class="quote-wrapper">
+      <div class="quote-aura"></div>
+      <div class="quote-outer" id="quote-card">
+        <div class="quote-corner-br"></div>
+        <div class="quote-inner">
+          <div class="quote-body">
+            <blockquote class="quote-text">
+              "Innovation distinguishes between a leader and a follower"
+            </blockquote>
+            <div class="quote-author">— Steve Jobs</div>
+          </div>
+          <div class="quote-shine"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEAM MEMBERS SECTION ═══ -->
+  <section class="team-section" id="team">
+    <div class="section-header team-header">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Team Members</span>
+    </div>
+    <p class="team-intro">Meet the people shaping the IEDC CET ecosystem.</p>
+
+    <h3 class="team-group-title">Execom</h3>
+    <div class="team-auto-slider" id="execom-slider">
+      <div class="team-auto-track">
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/AadithTom_CTO.jpg" alt="Aadith Tom"
+                loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Chief Technical Officer</div>
+              <div class="team-name">Aadith Tom</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/Ahdia Aisha.jpg" alt="Ahdia Aisha" loading="lazy"
+                decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Chief Executive Officer</div>
+              <div class="team-name">Ahdia Aisha</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/Anavadya Pradeep_Community Lead.jpg"
+                alt="Anavadya Pradeep" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Community Head</div>
+              <div class="team-name">Anavadya Pradeep</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/AvaneeshPramod_StudentLead.jpg"
+                alt="Avaneesh Pramod" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Student Lead</div>
+              <div class="team-name">Avaneesh Pramod</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/GauriGThampi_WomenInnovation.jpg"
+                alt="Gauri G Thampi" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Women Innovation Lead</div>
+              <div class="team-name">Gauri G Thampi</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/Jazeel CFO.png" alt="Jazeel" loading="lazy"
+                decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Chief Finance Officer</div>
+              <div class="team-name">Jazeel</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/Nandana A COO.jpg" alt="Nandana A" loading="lazy"
+                decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Chief Operating Officer</div>
+              <div class="team-name">Nandana A</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Execom/sayoojya_.jpg" alt="Sayoojya" loading="lazy"
+                decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Creative Head</div>
+              <div class="team-name">Sayoojya</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+      </div>
+      <div class="team-slider-dots" id="execom-dots"></div>
+    </div>
+
+    <h3 class="team-group-title">Executive Panel</h3>
+    <div class="team-auto-slider" id="exec-panel-slider">
+      <div class="team-auto-track">
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Vinayak N Publicity lead.jpg"
+                alt="Vinayak N" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Publicity Lead</div>
+              <div class="team-name">Vinayak N</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Abhinav Krishna B(PR Lead).png"
+                alt="Abhinav Krishna B" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">PR Lead</div>
+              <div class="team-name">Abhinav Krishna B</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Abhinav B Nair_PO(operations).jpg"
+                alt="Abhinav B Nair" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">PO Operations</div>
+              <div class="team-name">Abhinav B Nair</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Daya Vivek_PO(operations).jpg"
+                alt="Daya Vivek" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">PO Operations</div>
+              <div class="team-name">Daya Vivek</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Abhinav K P _SR Lead .jpg"
+                alt="Abhinav K P" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">SR Lead</div>
+              <div class="team-name">Abhinav K P</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Allan Mathew George Research Lead.jpg"
+                alt="Allan Mathew George" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Research Lead</div>
+              <div class="team-name">Allan Mathew George</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Ameen P Jami (Web Lead).jpg"
+                alt="Ameen P Jami" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Web Lead</div>
+              <div class="team-name">Ameen P Jami</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Jalvin Jomy.jpg"
+                alt="Ameen P Jami" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Design Lead</div>
+              <div class="team-name">Jalvin P Jami</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Bharath Krishna R. Head of Media_.jpg"
+                alt="Bharath Krishna R" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Head of Media</div>
+              <div class="team-name">Bharath Krishna R</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Johan Varghese K IPR Lead.jpg"
+                alt="Johan Varghese K" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">IPR Lead</div>
+              <div class="team-name">Johan Varghese K</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="teal">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Sahla.I_PO(Creative).jpg" alt="Sahla I"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="team-meta">
+              <div class="team-role">PO Creative</div>
+              <div class="team-name">Sahla I</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Mariam Jo Palakkadan_PO(Creative).png"
+                alt="Mariam Jo Palakkadan" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">PO Creative</div>
+              <div class="team-name">Mariam Jo Palakkadan</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="purple">
+          <div class="team-card-top">
+            <div class="team-avatar"><img
+                src="assets/IEDC 2026 Executive Panel/Swasthik K Praveen (social media manager.JPG"
+                alt="Swasthik K Praveen" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Social Media Manager</div>
+              <div class="team-name">Swasthik K Praveen</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+        <article class="team-card" data-theme="peach">
+          <div class="team-card-top">
+            <div class="team-avatar"><img src="assets/IEDC 2026 Executive Panel/Varsha Aney Kurian , Content lead.jpg"
+                alt="Varsha Aney Kurian" loading="lazy" decoding="async"></div>
+            <div class="team-meta">
+              <div class="team-role">Content Lead</div>
+              <div class="team-name">Varsha Aney Kurian</div>
+            </div>
+          </div>
+          <hr class="team-divider" />
+        </article>
+      </div>
+      <div class="team-slider-dots" id="exec-panel-dots"></div>
+    </div>
+
+  </section>
+  <!-- ═══ SOCIALS SECTION ═══ -->
+  <section class="socials-section" id="socials">
+    <div class="section-header team-header">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Our Socials</span>
+    </div>
+    <p class="team-intro">
+      Connect with the IEDC CET community
+    </p>
+
+    <div class="socials-grid">
+      <a href="https://www.linkedin.com/company/innovation-and-entrepreneurship-development-cell-cet/"
+        class="social-box linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/iedc_cet/" class="social-box instagram" aria-label="Instagram" target="_blank"
+        rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+    </div>
+  </section>
+  <!-- Celebration Overlay Modal -->
+  <div class="celebration-overlay" id="celebration-overlay">
+    <div class="celebration-modal">
+      <div class="modal-glow-bg"></div>
+      <div class="modal-icon">🎉</div>
+      <h2 class="modal-title">Congratulations!</h2>
+      <p class="modal-text">Your idea submission was received successfully. 🎉<br>Thank you for sharing your innovative
+        concept with IEDC CET! Our team will review it and get back to you soon. Keep innovating! 🚀</p>
+      <button class="modal-btn btn-glass" id="celebration-close-btn">Awesome!</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@1.22.0/dist/umd/lucide.min.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+
+</html>
