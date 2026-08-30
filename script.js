@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function initAutoSlider(sliderId, dotsId, interval = 3500) {
+  function initAutoSlider(sliderId, dotsId, interval = 950) {
     const sliderEl = document.getElementById(sliderId);
     const track = sliderEl ? sliderEl.querySelector(".team-auto-track") : null;
     const dotsContainer = document.getElementById(dotsId);
